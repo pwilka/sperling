@@ -1,0 +1,27 @@
+﻿# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# Node / build
+node_modules/
+dist/
+build/
+.cache/
+*.map
+
+# Composer
+vendor/
+composer.lock
+
+# LocalWP / WordPress things we don’t want in a theme repo
+wp-config.php
+*.sql
+*.sqlite
+*.zip
+
+# Images/exports
+*.psd
+*.ai
