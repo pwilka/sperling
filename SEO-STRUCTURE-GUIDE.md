@@ -5,9 +5,30 @@
 
 ---
 
+## 🎯 Ground Rules (How This Site Is Built)
+
+### Primary Goal
+**Local inbound leads** - Every page and element should drive qualified local leads.
+
+### Design Philosophy
+- **SEO > aesthetics** (but still clean, modern)
+- **Simple navigation** - Low cognitive load
+- **Written for real humans** - Optimized for Google
+- **Every page has one clear job** - No confusion
+- **No bloated plugins** - No over-engineering
+
+### Content Strategy
+- Focus on local keywords (Sioux Falls, South Dakota)
+- Plain English (no jargon)
+- User-focused (not salesy)
+- Trust-building (local expertise, years in business)
+- Conversion-focused (clear CTAs)
+
+---
+
 ## 📋 Overview
 
-This document defines the exact structure and content requirements for each page type to maximize SEO performance and user experience.
+This document defines the exact structure and content requirements for each page type to maximize SEO performance and user experience while maintaining simplicity and conversion focus.
 
 ---
 
