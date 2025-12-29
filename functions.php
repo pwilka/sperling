@@ -63,6 +63,44 @@ function sperling_scripts() {
 add_action('wp_enqueue_scripts', 'sperling_scripts');
 
 /**
+ * Google Analytics 4 (GA4) Integration
+ * 
+ * To configure: Add your GA4 Measurement ID in WordPress Admin → Appearance → Customize → Theme Settings
+ * Or define it in wp-config.php: define('SPERLING_GA4_ID', 'G-XXXXXXXXXX');
+ */
+function sperling_google_analytics() {
+    // Get GA4 Measurement ID from theme options, constant, or leave empty to disable
+    $ga4_id = '';
+    
+    // Check for constant first (wp-config.php)
+    if (defined('SPERLING_GA4_ID')) {
+        $ga4_id = SPERLING_GA4_ID;
+    }
+    // Check for theme option (if ACF is available)
+    elseif (function_exists('get_field')) {
+        $ga4_id = get_field('ga4_measurement_id', 'option');
+    }
+    
+    // Only output if GA4 ID is set
+    if (!empty($ga4_id) && is_string($ga4_id)) {
+        ?>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo esc_attr($ga4_id); ?>"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '<?php echo esc_js($ga4_id); ?>', {
+                'anonymize_ip': true,
+                'cookie_flags': 'SameSite=None;Secure'
+            });
+        </script>
+        <?php
+    }
+}
+add_action('wp_head', 'sperling_google_analytics', 1);
+
+/**
  * Fallback menu if no menu is set
  */
 function sperling_fallback_menu() {
