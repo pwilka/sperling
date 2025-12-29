@@ -15,11 +15,29 @@
 
 // Security check - only allow if logged in as admin
 if (!defined('ABSPATH')) {
-    require_once('wp-load.php');
+    // Try to load WordPress
+    $wp_load_paths = [
+        __DIR__ . '/wp-load.php',
+        dirname(__DIR__) . '/wp-load.php',
+        dirname(dirname(__DIR__)) . '/wp-load.php',
+    ];
+    
+    $wp_loaded = false;
+    foreach ($wp_load_paths as $path) {
+        if (file_exists($path)) {
+            require_once($path);
+            $wp_loaded = true;
+            break;
+        }
+    }
+    
+    if (!$wp_loaded) {
+        die('Error: Could not find wp-load.php. Make sure this file is in your WordPress root directory.');
+    }
 }
 
-if (!current_user_can('manage_options')) {
-    die('You must be logged in as an administrator to run this script.');
+if (!function_exists('current_user_can') || !current_user_can('manage_options')) {
+    die('You must be logged in as an administrator to run this script. <a href="' . admin_url() . '">Log in here</a>');
 }
 
 // Start output
