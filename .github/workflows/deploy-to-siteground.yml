@@ -1,0 +1,44 @@
+name: Deploy to SiteGround
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Deploy to SiteGround via FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /public_html/wp-content/themes/sperling/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.DS_Store
+          **/README.md
+          **/DEPLOYMENT.md
+          **/SITEGROUND-DEPLOYMENT.md
+          **/INSTALL-INSTRUCTIONS.md
+          **/WP-CLI-*.md
+          **/QUICK-START-*.md
+          **/RUN-*.md
+          **/RUN-*.bat
+          **/create-all-pages.php
+          **/setup-complete-site.php
+          **/.gitignore
+          **/LICENSE
+          **/*.md
+          **/*.bat
+          **/*.phar
+
