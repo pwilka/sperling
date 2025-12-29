@@ -1,0 +1,29 @@
+name: Deploy Setup Script to WordPress Root
+
+on:
+  workflow_dispatch: # Manual trigger only
+  push:
+    paths:
+      - 'setup-complete-site.php'
+      - '.github/workflows/deploy-setup-script.yml'
+
+jobs:
+  deploy-script:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      
+    - name: Deploy setup script to WordPress root
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /public_html/
+        local-dir: ./
+        include: |
+          setup-complete-site.php
+        dangerous-clean-slate: false
+
