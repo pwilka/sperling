@@ -14,7 +14,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       
-    - name: Deploy to SiteGround via FTP
+    - name: Deploy theme files to SiteGround
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: ${{ secrets.FTP_HOST }}
@@ -42,4 +42,16 @@ jobs:
           **/*.md
           **/*.bat
           **/*.phar
+    
+    - name: Deploy setup script to WordPress root
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ${{ secrets.FTP_HOST }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /public_html/
+        local-dir: ./
+        include: |
+          setup-complete-site.php
+        dangerous-clean-slate: false
 
