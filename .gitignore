@@ -1,15 +1,8 @@
-﻿# LocalWP files
-.htaccess
+﻿# WordPress - Sensitive files (NEVER commit these)
 wp-config.php
-wp-content/uploads/
-wp-content/upgrade/
-wp-content/cache/
-wp-content/backup-db/
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
-wp-content/cache/
-wp-content/backups/
-wp-content/ai1wm-backups/
+*.sql
+*.sqlite
+*.zip
 
 # System files
 .DS_Store
@@ -41,3 +34,13 @@ vendor/
 # Temporary files
 *.tmp
 *.temp
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# Images/exports (uncomment if you want to exclude large image files)
+# *.psd
+# *.ai
