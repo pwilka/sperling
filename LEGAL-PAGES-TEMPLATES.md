@@ -178,6 +178,130 @@
 
 ---
 
+## 🏛️ South Dakota Insurance Law Context
+
+### Regulatory Information
+
+**South Dakota Division of Insurance:**
+- Oversees insurance industry in South Dakota
+- Ensures compliance with state laws
+- Protects consumer interests
+- Handles licensing and complaints
+
+**Contact Information:**
+- **Agency:** South Dakota Division of Insurance
+- **Website:** https://dlr.sd.gov/insurance/
+- **Phone:** (Check current number)
+- **Address:** (Check current address)
+
+### South Dakota Auto Insurance Requirements
+
+**Minimum Required Coverage:**
+- **Bodily Injury Liability:** $25,000 per person / $50,000 per accident
+- **Property Damage Liability:** $25,000 per accident
+- **Uninsured/Underinsured Motorist:** $25,000 per person / $50,000 per accident
+
+**Penalties for Non-Compliance:**
+- Fines
+- License suspension
+- Potential jail time
+
+**Where to Include:**
+- Auto Insurance service page
+- FAQ sections
+- Educational content
+- Disclaimers on quote forms
+
+### Insurance Fraud Regulations
+
+**South Dakota Law:**
+- Prohibits fraudulent insurance acts
+- False statements on applications or claims are illegal
+- Penalties range from misdemeanors to felonies
+- Severity depends on offense
+
+**Where to Include:**
+- Terms of Use page
+- General disclaimers
+- Educational content about honest applications
+
+### Consumer Protection Laws
+
+**State Protections:**
+- Laws protect consumers from deceptive trade practices
+- Ensures fair treatment and transparency
+- Regulates insurer-policyholder relationships
+
+**Where to Include:**
+- Privacy Policy
+- Terms of Use
+- About Us page (trust signals)
+
+### Licensing Requirements
+
+**Agent Licensing:**
+- All agents must be licensed in South Dakota
+- Continuing education required
+- License numbers should be available (if required by state)
+
+**Agency Licensing:**
+- Agency must be licensed to sell insurance
+- License information should be accessible
+- Link to state insurance department
+
+**Where to Include:**
+- Footer (license information)
+- About Us page
+- Contact page
+- Separate licensing page (optional)
+
+---
+
+### Recommended Content Sections
+
+**1. Educational Content (Service Pages):**
+- "South Dakota Auto Insurance Requirements" section on Auto page
+- Explain minimum coverage requirements
+- Explain penalties for non-compliance
+- Help users understand state laws
+
+**2. FAQ Sections:**
+- "What are South Dakota's minimum auto insurance requirements?"
+- "What happens if I drive without insurance in South Dakota?"
+- "How do I file a complaint with the South Dakota Division of Insurance?"
+
+**3. Disclaimers:**
+- State that information is general
+- Recommend consulting licensed agent
+- Link to South Dakota Division of Insurance
+- Note that requirements may change
+
+**4. Footer/About:**
+- "Licensed in South Dakota"
+- Link to state insurance department
+- License numbers (if applicable)
+- "For questions about our license or to file a complaint, contact the South Dakota Division of Insurance"
+
+---
+
+### Implementation Notes
+
+**Do Not:**
+- ❌ Provide legal advice
+- ❌ Guarantee compliance
+- ❌ Make false claims about coverage
+- ❌ Misrepresent state requirements
+
+**Do:**
+- ✅ Provide educational information
+- ✅ Link to official state resources
+- ✅ Recommend consulting licensed agents
+- ✅ Keep information current
+- ✅ Update when laws change
+- ✅ Use plain English (not legal jargon)
+
+---
+
 ## 📜 Licensing Language
 
 ### Required Information
